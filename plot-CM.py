@@ -13,7 +13,7 @@ from until.constraints_EEGNet import MaxNormDefaultConstraint_EEGNet
 from until.validation import plot_confusion_matrix
 import argparse
 from until.loadData import *
-from cutcat import *
+from cutmix import *
 from loguru import logger
 
 parser = argparse.ArgumentParser(description='input the dataset dir path.')

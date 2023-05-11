@@ -7,16 +7,10 @@ import warnings
 from braindecode.visualization.perturbation import compute_amplitude_prediction_correlations
 
 warnings.filterwarnings('ignore')
-from sklearn.model_selection import KFold
 from braindecode.torch_ext.util import np_to_var, var_to_np
-import torch.optim as optim
 import time
 from torch.autograd import Variable
-from until.deep4_net import Deep4Net_base
-from until.eegnet import eegnet
 from until.ConvNet import ShallowFBCSPNet
-from until.constraints import MaxNormDefaultConstraint
-from until.constraints_EEGNet import MaxNormDefaultConstraint_EEGNet
 import argparse
 from until.loadData import *
 from until.plot_head import *

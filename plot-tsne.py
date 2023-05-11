@@ -13,7 +13,7 @@ from until.constraints_EEGNet import MaxNormDefaultConstraint_EEGNet
 import argparse
 from until.loadData import *
 from until.tsne import tsne
-from cutcat import *
+from cutmix import *
 from loguru import logger
 
 parser = argparse.ArgumentParser(description='input the dataset dir path.')

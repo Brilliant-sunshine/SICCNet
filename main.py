@@ -19,7 +19,7 @@ import argparse
 from until.loadData import *
 from until.tsne import tsne
 from until.validation import plot_confusion_matrix
-from cutcat import *
+from cutmix import *
 from loguru import logger
 
 parser = argparse.ArgumentParser(description='input the dataset dir path.')
@@ -295,7 +295,7 @@ for backbone_net in args.backbone_net_all:
             last10_preci = epo_preci[-10:]
             last10_kappa = epo_kappa[-10:]
 
-            for i in range(10):
+            for i in range(args.folds):
                 logger.info(
                     "subject = " + str(subject_id) + " Fold = " + str(fold) + " " + str(
                         i - 10) + " result: ACC: " + "%.4f" % last10_acc[i] +
